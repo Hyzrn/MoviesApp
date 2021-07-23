@@ -12,7 +12,8 @@
   "dependencies": {
     "axios": "^0.21.1",
     "react": "17.0.1",
-    "react-native": "0.64.2"
+    "react-native": "0.64.2",
+    "react-native-image-slider-box": "^1.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
