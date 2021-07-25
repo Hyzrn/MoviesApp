@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {
-  Text,
   View,
   StyleSheet,
   Dimensions,
@@ -20,7 +19,7 @@ import {
 
 const dimension = Dimensions.get('screen');
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [moviesImages, setMoviesImages] = useState([]);
   const [popularMovies, setPopularMovies] = useState([]);
   const [popularTv, setPopularTv] = useState([]);
@@ -83,18 +82,30 @@ const Home = () => {
           )}
           {popularMovies && (
             <View style={styles.carousel}>
-              <List title={'Popular Movies'} data={popularMovies} />
+              <List
+                navigation={navigation}
+                title={'Popular Movies'}
+                data={popularMovies}
+              />
             </View>
           )}
           {popularTv && (
             <View style={styles.carousel}>
-              <List title={'Popular Tv Shows'} data={popularTv} />
+              <List
+                navigation={navigation}
+                title={'Popular Tv Shows'}
+                data={popularTv}
+              />
             </View>
           )}
 
           {familyMovies && (
             <View style={styles.carousel}>
-              <List title={'Family Movies'} data={familyMovies} />
+              <List
+                navigation={navigation}
+                title={'Family Movies'}
+                data={familyMovies}
+              />
             </View>
           )}
         </ScrollView>
