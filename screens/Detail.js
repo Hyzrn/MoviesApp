@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 import {getMovie} from '../services/services';
+import StarRating from 'react-native-star-rating';
 
 const placeholderImage = require('../assets/images/notfound.png');
 const height = Dimensions.get('screen').height;
@@ -56,6 +57,13 @@ const Detail = ({route}) => {
                 })}
               </View>
             )}
+            <StarRating
+              disabled={true}
+              fullStarColor={'gold'}
+              starSize={30}
+              maxStars={5}
+              rating={movieDetail.vote_average / 2}
+            />
           </View>
         </ScrollView>
       )}
